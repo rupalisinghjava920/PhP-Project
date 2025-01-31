@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+  }
+  :root{
+    --color1:#262828;
+    --color2:rgba(96, 92, 92, 0.301);
+    --color3:#15bab4;
+    --black:#080808;
+    --white:#f4e5e5;
+    --lightgray: #efcccc;
+   
+  }
+
+  html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+  }
+
+  .card-container{
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    height: calc(100vh - 50px);
+    background-color: var(--color2);
+  }
+  
+
+/* The card layout */
+.card {
+    width: 100%;
+    max-width: 500px;
+    background-color: rgb(66, 157, 110);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(147, 137, 137, 0.1);
+    text-align: center;
+    position: fixed;
+}
+
+  .header{
+    background-color: var(--color1);
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+  }
+
+  .header .header_body{
+    display: flex;
+    align-items: center;
+    padding:0 20px;
+    height: 80px;
+    justify-content: space-between;
+   
+  }
+  
+  .header .header_body .logo{
+    margin-right: 2rem;
+    font-size: 3rem;
+    color: var(--color3);
+  }
+
+  .header .header_body .navbar {
+    display: flex;
+    gap: 2rem; 
+    font-size: 2rem;
+    color: var(--black);
+  }
+
+  
+.header .header_body .cart {
+    font-size: 3rem;
+    color: var(--white);
+    margin-left: 108rem;
+    position: fixed;
+  }
+  
+  .header .header_body .navbar a:hover,
+  .header .header_body .cart  {
+    color: var(--white);
+  }
+  
+  /*.header .header_body .cart span:hover {
+    color: var(--color3);
+  }*/
+
+ /* #menu-btn{
+    margin-left: 2rem;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--white);
+    display: none;
+  }*/
+ 
+  
+  .form-header {
+    font-size: 3.4rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--color1);
+}
+
+.input_fields {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid var(--lightgray);
+    border-radius: 5px;
+    font-size: 1.6rem;
+}
+
+ .submit_btn {
+    background-color: var(--black);
+    color: var(--white);
+    padding: 1rem 4rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.8rem;
+    
+}
+
+
+.display_message {
+    padding: 20px;
+    background-color: #34e33a;
+    color: black;
+    position: fixed;
+    top: 5px;
+    left: 50%;
+    transform: translateX(-70%);
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(42, 22, 22, 0.2);
+    z-index: 12000;
+    text-align: center;
+    
+}
+.display_message i {
+    margin-left: 30px;
+    cursor: pointer;
+}
+
+/* table degione*/
+
+/* Styling for the product display section */
+.display_products {
+    width: 60%;
+    margin:  60%;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    position: absolute;
+    background-color: #f9f9f9;
+  }
+  
+  /* Styling the table */
+  .display_products table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    text-align: left;
+  }
+  
+  .display_products table thead {
+    background-color: #1f655e;
+    color: white;
+  }
+  
+  .display_products table thead th {
+    padding: 10px;
+  }
+  
+  .display_products table tbody tr {
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .display_products table tbody td {
+    padding: 10px;
+  }
+  
+  .display_products table tbody td img {
+    width: 50px;
+    height: auto;
+    border-radius: 4px;
+  }
+  
+  .display_products table tbody td .btn {
+    padding: 5px 10px;
+    color: white;
+    background-color: #28a745;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .display_products table tbody td .btn.delete {
+    background-color: #dc3545;
+  }
+
+  .empty_text {
+    padding-top: 0;
+    background-color: #1f655e; 
+    color: #09090a; 
+    border: 1px solid #969091; 
+    padding: 14px;
+    margin: 0;
+    border-radius: 5px; 
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    width: 910px;
+    height: 50px;
+}
+
+
+
+  

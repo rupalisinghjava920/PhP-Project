@@ -12,14 +12,14 @@
 
     $select_cart=mysqli_query($con ,"Select * from `cart` where name='$products_name'");
     if(mysqli_num_rows($select_cart) >0){
-        echo "Product already added to cart";
+        $display_message="Product already added to cart";
     }
 
     else{
          //insert cart data in cart table
-    $insert_products=mysqli_query($con, "insert into `cart` (name,price,image,quantity) 
-    values('$products_name','$products_price','$products_image','$product_quantity')");
-
+    $insert_products=mysqli_query($con, "INSERT INTO `cart` (name,price,image,quantity) VALUES
+     ('$products_name','$products_price','$products_image','$product_quantity')");
+         $display_message="Product added to cart";
     }
   }
 
@@ -86,15 +86,29 @@
         }
 
         .submit_btn {
-            background-color:rgb(22, 23, 23);
-            color: #fff;
-            border: none;
-            padding: 12px 20px;
-            font-size: 16px;
-            cursor: pointer;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
+    background-color: rgb(22, 23, 23); 
+    color: #fff; 
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: inline-block;
+    width: 100%;
+}
+
+.submit_btn:hover {
+    background-color: #e74c3c; 
+    transform: scale(1.05); 
+    box-shadow: 0px 4px 10px rgba(231, 76, 60, 0.5); 
+}
+
+
+
 
     </style>
     <!-- font awesome link -->
@@ -108,7 +122,23 @@
   <!-- header -->
 <?php include 'header.php'?>
 
+
 <div class="container">
+
+<!-- message display -->
+ 
+<?php
+        if(isset($display_message)){
+            
+            echo
+            "<div class='display_message'>
+               <span>$display_message</span>
+                 <i class='fas fa-times' onclick='this.parentElement.style.display=`none`'></i>
+            </div>";
+        }
+    
+    ?>
+
      <section class="class product">
         <h1 class="heading">Lets Shop</h1>
         <div class="product_container">
@@ -119,7 +149,7 @@
                 while($fetch_product=mysqli_fetch_assoc($select_products)){
                     ?>
                     
-                    <from action=""  method="post" >
+                    <form action=""  method="post" >
                         <div class="edit_form">
                             <img src="images/<?php echo $fetch_product['image'];?>" alt="<?php echo $fetch_product['name']; ?>" >
                             <h3><?php echo $fetch_product['name'];?></h3>
@@ -129,7 +159,7 @@
                             <input type="hidden" name="product_image" value="<?php echo $fetch_product['image']; ?>">
                             <input type="submit" class="submit_btn cart_btn" value="Add to Cart" name="add_to_cart">
                         </div>
-                    </from>
+                    </form>
            
                     <?php
                 }

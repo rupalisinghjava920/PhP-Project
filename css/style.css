@@ -136,7 +136,7 @@
     background-color: #34e33a;
     color: black;
     position: fixed;
-    top: 5px;
+    top: 10px;
     left: 50%;
     transform: translateX(-70%);
     border-radius: 5px;

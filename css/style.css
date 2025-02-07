@@ -38,13 +38,15 @@
 
 /* The card layout */
 .card {
-    width: 100%;
-    max-width: 500px;
-    background-color: rgb(66, 157, 110);
+    width: 500px;
+    max-width: 1000px;
+    height: auto;
+    background-color: #1f655e; 
     padding: 2rem;
-    border-radius: 10px;
+    border-radius: 5px;
     box-shadow: 0 4px 6px rgba(147, 137, 137, 0.1);
     text-align: center;
+    justify-content: center;
     position: fixed;
 }
 
@@ -86,22 +88,13 @@
     position: fixed;
   }
   
-  .header .header_body .navbar a:hover,
   .header .header_body .cart  {
     color: var(--white);
   }
+  .header .header_body .navbar a{
+    color: white;
+  }
   
-  /*.header .header_body .cart span:hover {
-    color: var(--color3);
-  }*/
-
- /* #menu-btn{
-    margin-left: 2rem;
-    font-size: 2rem;
-    cursor: pointer;
-    color: var(--white);
-    display: none;
-  }*/
  
   
   .form-header {
@@ -115,15 +108,17 @@
     width: 100%;
     padding: 1rem;
     margin-bottom: 1.5rem;
-    border: 1px solid var(--lightgray);
+    border: 2px solid var(--lightgray);
     border-radius: 5px;
+    box-shadow: white;
     font-size: 1.6rem;
 }
 
  .submit_btn {
+    margin-top: 25px;
     background-color: var(--black);
     color: var(--white);
-    padding: 1rem 4rem;
+    padding: 1.5rem 5rem;
     border-radius: 5px;
     cursor: pointer;
     font-size: 1.8rem;
@@ -152,18 +147,16 @@
 
 /* table degione*/
 
-/* Styling for the product display section */
 .display_products {
-    width: 60%;
-    margin:  60%;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    overflow: hidden;
-    position: absolute;
-    background-color: #f9f9f9;
+    width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    
   }
   
-  /* Styling the table */
   .display_products table {
     width: 100%;
     border-collapse: collapse;
@@ -174,18 +167,23 @@
   .display_products table thead {
     background-color: #1f655e;
     color: white;
+    
   }
-  
+  .display_products th,td {
+    padding: 12px;
+    border: 2px solid #ddd;
+    text-align: center;
+    font-size: 16px;
+}
+
   .display_products table thead th {
-    padding: 10px;
-  }
-  
-  .display_products table tbody tr {
-    border-bottom: 1px solid #ddd;
+    padding: 15px;
   }
   
   .display_products table tbody td {
-    padding: 10px;
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
   }
   
   .display_products table tbody td img {
@@ -197,7 +195,7 @@
   .display_products table tbody td .btn {
     padding: 5px 10px;
     color: white;
-    background-color: #28a745;
+    /* background-color: #28a745; */
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -206,6 +204,20 @@
   .display_products table tbody td .btn.delete {
     background-color: #dc3545;
   }
+  
+  .delete_product_btn, .update_product_btn {
+    display: inline-block;
+    margin: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 20px;
+    transition: 0.3s;
+    color:red;
+}
+.update_product_btn {
+  background-color: gary; 
+  color: blue;
+}
 
   .empty_text {
     padding-top: 0;
@@ -222,6 +234,3 @@
     height: 50px;
 }
 
-
-
-  

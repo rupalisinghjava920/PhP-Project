@@ -50,6 +50,7 @@
             flex-wrap: wrap; 
             justify-content: center; 
             gap: 20px; 
+            overflow: hidden;
         }
 
         .edit_form {
@@ -66,10 +67,12 @@
             transform: translateY(-5px);
         }
         .edit_form img {
-            width: 100%;
-            height: 150px;
-            object-fit: cover; 
+            max-width: 100%;
+            max-height: 150px; 
+            height: auto;
+            object-fit: contain; 
             border-radius: 10px;
+            
             
         }
         

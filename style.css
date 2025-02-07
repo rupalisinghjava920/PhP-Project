@@ -1,0 +1,17 @@
+.border-style
+{
+    border: 5px;
+}
+
+.bg-white{
+    background-color:white ;
+}
+.rounded-lg{
+    border-radius: 5px;
+}
+.gap-6{
+    padding-top: 10px;
+}
+.style{
+    color: green;
+}

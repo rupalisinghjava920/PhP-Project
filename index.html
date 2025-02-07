@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-100">
+
+
+     <!-- Top Navbar -->
+     <nav class="bg-white shadow-md p-4 flex justify-between items-center fixed top-0 left-0 w-full z-10">
+        <h2 class="text-xl font-bold text-blue-600">Payonclick</h2>
+        
+        <div class="flex items-center space-x-4">
+            <i class="fa-solid fa-lightbulb text-black-600 text-xl"></i>
+            <i class="fa-solid fa-calculator text-blue-600 text-xl"></i>
+            <i class="fa fa-user-circle text-blue-800 text-xl"></i>
+            <span class="text-blue-900">Hello Admin</span>
+            <i class="fa-solid fa fa-angle-down transition-transform duration-300 group-hover:translate-x-1"></i>
+        
+        </div>
+    </nav>
+
+    <!-- Sidebar -->
+    <div class="flex pt-16">
+        <aside class="w-64 bg-white shadow-md h-screen p-5 fixed left-0 top-10">
+            <ul class="mt-5 space-y-4">
+                <li class="p-2 hover:bg-gray-100 hover:text-blue-700 rounded flex justify-between items-center">
+                    <a href="#">Dashboard</a>
+                </li>
+                <li class="p-2 hover:bg-gray-100 hover:text-blue-700 rounded flex justify-between items-center">
+                    <a href="#"><i class="fa-solid fa-box"></i> Member Management</a>
+                    <i class="fa-solid fa-chevron-right transition-transform duration-300 group-hover:translate-x-1"></i>
+                </li>
+                <li class="p-2 hover:bg-gray-100 hover:text-blue-700 rounded flex justify-between items-center">
+                    <a href="#"><i class="fa-solid fa-box"></i> Wallet Report</a>
+                    <i class="fa-solid fa-chevron-right transition-transform duration-300 group-hover:translate-x-1"></i>
+                </li>
+                <li class="p-2 hover:bg-gray-100 hover:text-blue-700 rounded flex justify-between items-center">
+                    <a href="#"><i class="fa-solid fa-box"></i> Service Report</a>
+                    <i class="fa-solid fa-chevron-right transition-transform duration-300 group-hover:translate-x-1"></i>
+                </li>
+                <li class="p-2 hover:bg-gray-100 hover:text-blue-700 rounded flex justify-between items-center">
+                    <a href="#"><i class="fa-solid fa-box"></i> Commission Setup</a>
+                    <i class="fa-solid fa-chevron-right transition-transform duration-300 group-hover:translate-x-1"></i>
+                </li>
+                <li class="p-2 hover:bg-gray-100 hover:text-blue-700 rounded flex justify-between items-center">
+                    <a href="#"><i class="fa-solid fa-box"></i> Recharge Setting</a>
+                    <i class="fa-solid fa-chevron-right transition-transform duration-300 group-hover:translate-x-1"></i>
+                </li>
+                <li class="p-2 hover:bg-gray-100 hover:text-blue-700 rounded flex justify-between items-center">
+                    <a href="#"><i class="fa-solid fa-box"></i> Access Management</a>
+                    <i class="fa-solid fa-chevron-right transition-transform duration-300 group-hover:translate-x-1"></i>
+                </li>
+                <li class="p-2 hover:bg-gray-100 hover:text-blue-700 rounded flex justify-between items-center">
+                    <a href="#"><i class="fa-solid fa-box"></i> API Setting</a>
+                    <i class="fa-solid fa-chevron-right transition-transform duration-300 group-hover:translate-x-1"></i>
+                </li>
+                <li class="p-2 hover:bg-gray-100 hover:text-blue-700 rounded flex justify-between items-center">
+                    <a href="#"><i class="fa-solid fa-box"></i> SMS Setting</a>
+                    <i class="fa-solid fa-chevron-right transition-transform duration-300 group-hover:translate-x-1"></i>
+                </li>
+                <li class="p-2 hover:bg-gray-100 hover:text-blue-700 rounded flex justify-between items-center">
+                    <a href="#"><i class="fa-solid fa-box"></i> Legal Document</a>
+                    <i class="fa-solid fa-chevron-right transition-transform duration-300 group-hover:translate-x-1"></i>
+                </li>
+                <li class="p-2 hover:bg-gray-100 hover:text-blue-700 rounded flex justify-between items-center">
+                    <a href="#"><i class="fa-solid fa-box"></i> Ticket Window</a>
+                    <i class="fa-solid fa-chevron-right transition-transform duration-300 group-hover:translate-x-1"></i>
+                </li>
+                <li class="p-2 hover:bg-gray-100 hover:text-blue-700 rounded flex justify-between items-center">
+                    <a href="#"><i class="fa-solid fa-box"></i> Enquiry List</a>
+                    <i class="fa-solid fa-chevron-right transition-transform duration-300 group-hover:translate-x-1"></i>
+                </li>
+                
+            </ul>
+        </aside>
+    </div>
+    
+
+        <!-- Main Content-->
+            <main class=" p-6 ml-64 mt-3">
+                <div class="flex justify-end items-center">
+                    <div class="bg-white p-1 border-style" >
+                        <i class="fa fa-calendar"></i>
+                        <input type="date" class="p-2 border rounded outline-none focus:ring-2 focus:ring-blue-300" />
+                    </div>
+                </div>
+                
+
+            <!-- Dashboard Cards -->
+            <div class="grid grid-cols-4 gap-6 mt-6">
+                <!-- Total Balance Card -->
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <div class="flex items-center justify-between">
+                        <i class="fa-solid fa-wallet card-icon text-green-500"></i>
+                        <h3 class="text-gray-500">Total Balance</h3>
+                        <span class="font-awesome text-black-600 ml-2">100%</span>
+                        <div class="relative w-20 h-20">
+                            <canvas id="progress1"></canvas>
+                            <div class="absolute inset-0 flex items-center justify-center text-sm font-bold">60%</div>
+                        </div>
+                    </div>
+                    <p class="text-xl font-bold">₹2023064.88/-</p>
+                    <p class="text-muted">Total</p>
+                    
+                </div>
+
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <div class="flex items-center justify-between">
+                        <i class="fa-solid fa-piggy-bank card-icon text-green-500"></i>
+                        <h3 class="text-gray-500">Main Wallet</h3>
+                        <span class="font-awesome text-black-600 ml-2">+40%</span>
+                        <div class="relative w-20 h-20">
+                            <canvas id="progress2"></canvas>
+                            <div class="absolute inset-0 flex items-center justify-center text-sm font-bold">78%</div>
+                        </div>
+                    </div>
+                    <p class="text-xl font-bold">₹1723881.63/-</p>
+                    <p class="text-muted">Income</p>
+                    
+                </div>
+
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <div class="flex items-center justify-between">
+                        <i class="fa-solid fa-hand-holding-usd card-icon text-green-500"></i>
+                        <h3 class="text-gray-500">AEPS Wallet</h3>
+                        <span class="font-awesome text-black-600 ml-2">+30%</span>
+                        <div class="relative w-20 h-20">
+                            <canvas id="progress3"></canvas>
+                            <div class="absolute inset-0 flex items-center justify-center text-sm font-bold">450%</div>
+                        </div>
+                    </div>
+                    <p class="text-xl font-bold">₹299183.25/-</p>
+                    <p class="text-muted">Expense</p>
+                   
+                </div>
+
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <div class="flex items-center justify-between">
+                        <i class="fa-solid fa-coins card-icon  text-green-500"> </i>
+                        <p class="text-gray-500"> Commission Wallet</p>
+                        <span class="font-awesome text-black-600 ml-2">+30%</span>
+                        <div class="relative w-20 h-20">
+                            <canvas id="progress4"></canvas>
+                            <div class="absolute inset-0 flex items-center justify-center text-sm font-bold">90%</div>
+                        </div>
+                    </div>
+                    <p class="text-xl font-bold">₹0.00/-</p>
+                    <p class="text-muted">Cashback</p>
+                   
+                </div>
+            </div>
+
+            <!-- Details Section -->
+            <div class="grid grid-cols-2 gap-6 mt-6">
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <h3 class="text-black-500 font-bold">AEPS Details</h3>
+                    
+                    <div class="flex justify-between  items-center mt-4"> 
+                        <i class="fa fa-credit-card-alt fa-2x"  style="color:green" ></i>
+                         
+                        <div class="flex flex-col items-start">
+                            <p class="text-black-500 ">₹17550.00</p>
+                            <p class="text-green-500 ">₹17550.00</p>
+                        </div>
+                        <div class="border-b-2 border-dotted border-gray-500 mt-2"></div>
+                        <i class="fa fa-credit-card-alt fa-2x"  style="color:red" ></i>
+                        <div class="flex flex-col items-start">
+                            <p class="text-black-500">₹36.75</p>
+                            <p class="text-red-500">₹36.75</p>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <h3 class="text-black-500 font-bold">Payout Details</h3>
+                    <div class="flex justify-between  items-center mt-4">
+                        <i class="fa fa-credit-card-alt fa-2x"  style="color:green" ></i>
+                        <div class="flex flex-col items-start">
+                            <p class="text-black-500 ">₹2700.00</p>
+                            <p class="text-green-500 ">₹2700.00</p>
+                        </div>
+                        <i class="fa fa-credit-card-alt fa-2x"  style="color:red" ></i>
+                        <div class="flex flex-col items-start">
+                            <p class="text-black-500">₹4.00</p>
+                            <p class="text-red-500">₹4.00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <h3 class="text-black-500 font-bold">Recharge Details</h3>
+                     
+                    <div class="flex justify-between  items-center mt-4">
+                        <i class="fa fa-credit-card-alt fa-2x"  style="color:green" ></i>
+                        <div class="flex flex-col items-start">
+                            <p class="text-black-500 ">₹299.00</p>
+                            <p class="text-green-500 ">₹299.00</p>
+                        </div>
+                        <i class="fa fa-credit-card-alt fa-2x "  style="color:red;margin-left: 110px;" ></i>
+                        <div class="flex flex-col items-start">
+                            <p class="text-black-500">₹0.00</p>
+                            <p class="text-red-500">₹0.00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <h3 class="text-black-500 font-bold">BillPayment Details</h3>
+                     
+                    <div class="flex justify-between  items-center mt-4">
+                        <i class="fa fa-credit-card-alt fa-2x"  style="color:green" ></i>
+                        <div class="flex flex-col items-start">
+                            <p class="text-black-500 ">₹0.00</p>
+                            <p class="text-green-500 ">₹0.00</p>
+                        </div>
+                        <i class="fa fa-credit-card-alt fa-2x"  style="color:red" ></i>
+                        <div class="flex flex-col items-start">
+                            <p class="text-black-500">₹0.00</p>
+                            <p class="text-red-500">₹0.00</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </main>
+    </div>
+
+    <!-- JavaScript for Progress Circles -->
+    <script src="script.js"></script>
+
+</body>
+</html>
